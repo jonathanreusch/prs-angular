@@ -9,6 +9,10 @@ import { UserListComponent } from './features/user-list/user-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserDetailComponent } from './features/user-detail/user-detail.component';
 import { FormsModule } from '@angular/forms';
+import { VendorListComponent } from './features/vendor-list/vendor-list.component';
+import { VendorDetailComponent } from './features/vendor-detail/vendor-detail.component';
+import { MenuComponent } from './core/menu/menu.component';
+import { UserCreateComponent } from './features/user-create/user-create.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,10 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     UserListComponent,
     UserDetailComponent,
+    VendorListComponent,
+    VendorDetailComponent,
+    MenuComponent,
+    UserCreateComponent,
   ],
   imports: [
     BrowserModule,
