@@ -1,0 +1,29 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col">Zip Code</th>
+      <th scope="col">Phone number</th>
+      <th scope="col">E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vendor of vendors">
+      <td scope="col">{{ vendor.id }}</td>
+      <td scope="col">{{ vendor.code }}</td>
+      <td scope="col">{{ vendor.name }}</td>
+      <td scope="col">{{ vendor.address }}</td>
+      <td scope="col">{{ vendor.city }}</td>
+      <td scope="col">{{ vendor.state }}</td>
+      <td scope="col">{{ vendor.zip }}</td>
+      <td scope="col">{{ vendor.phone }}</td>
+      <td scope="col">{{ vendor.email }}</td>
+      <td><a routerLink="/vendor/detail/{{vendor.id}}">Details</a></td>
+    </tr>
+  </tbody>
+</table>
