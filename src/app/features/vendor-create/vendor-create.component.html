@@ -1,5 +1,17 @@
 <div class="form-group row">
-  <label class="col-form-label col-sm-2" for="name">Name:</label>
+  <label class="col-form-label col-sm-2" for="code">Code:</label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="vendor.code"
+    type="text"
+    name="Code"
+    id="code"
+    placeholder="Vendor"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="Name">Name:</label>
   <input
     class="form-control col-sm-6"
     [(ngModel)]="vendor.name"
@@ -7,7 +19,6 @@
     name="Vendor"
     id="name"
     placeholder="Vendor"
-    disabled
   />
 </div>
 
@@ -16,11 +27,10 @@
   <input
     class="form-control col-sm-6"
     [(ngModel)]="vendor.address"
-    type="text"
+    type="test"
     name="Address"
     id="address"
     placeholder="Address"
-    disabled
   />
 </div>
 
@@ -33,7 +43,6 @@
     name="City"
     id="city"
     placeholder="City"
-    disabled
   />
 </div>
 
@@ -46,7 +55,6 @@
     name="State"
     id="state"
     placeholder="State"
-    disabled
   />
 </div>
 
@@ -59,7 +67,6 @@
     name="Zip"
     id="zip"
     placeholder="Zip"
-    disabled
   />
 </div>
 
@@ -72,7 +79,6 @@
     name="Phone"
     id="phone"
     placeholder="Phone"
-    disabled
   />
 </div>
 
@@ -85,10 +91,9 @@
     name="Email"
     id="email"
     placeholder="Email"
-    disabled
   />
 </div>
 
-<button class="btn btn-primary">Edit</button>
-<button type="button"(click)="deleteVendor()" class="btn btn-danger">Delete</button>
-
+<button type="button" class="btn btn-primary" (click)="createVendor()">
+  Create
+</button>

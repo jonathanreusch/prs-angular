@@ -1,4 +1,6 @@
-<button type="button" class="btn btn-primary" routerLink="/user/create">Add New User</button>
+<button type="button" class="btn btn-primary" routerLink="/user/create">
+  Add New User
+</button>
 
 <table class="table table-striped">
   <thead>
@@ -22,7 +24,13 @@
       <td scope="col">{{ user.email }}</td>
       <td scope="col">{{ user.reviewer }}</td>
       <td scope="col">{{ user.admin }}</td>
-      <td><a routerLink="/user/detail/{{ user.id }}">Details</a></td>
+      <td>
+        <a routerLink="/user/detail/{{ user.id }}">Details</a> |<a
+          routerLink="/user/list"
+          (click)="deleteUser(user.id)"
+          >Delete</a
+        >
+      </td>
     </tr>
   </tbody>
 </table>
