@@ -25,4 +25,13 @@ export class VendorListComponent implements OnInit {
       }
     );
   }
+  deleteVendor(id: number) {
+    this.vendorService.deleteById(id).subscribe(
+      (data) => {
+        //this.router.navigateByUrl('/user/list')
+        this.ngOnInit();
+      },
+      (error) => console.log(error)
+    );
+  }
 }

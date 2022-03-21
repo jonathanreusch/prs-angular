@@ -13,6 +13,7 @@ import { VendorListComponent } from './features/vendor-list/vendor-list.componen
 import { VendorDetailComponent } from './features/vendor-detail/vendor-detail.component';
 import { MenuComponent } from './core/menu/menu.component';
 import { UserCreateComponent } from './features/user-create/user-create.component';
+import { VendorCreateComponent } from './features/vendor-create/vendor-create.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { UserCreateComponent } from './features/user-create/user-create.componen
     VendorDetailComponent,
     MenuComponent,
     UserCreateComponent,
+    VendorCreateComponent,
   ],
   imports: [
     BrowserModule,
