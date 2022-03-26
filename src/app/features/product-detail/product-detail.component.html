@@ -1,0 +1,77 @@
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="id">ID:</label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="product.id"
+    type="text"
+    name="ID"
+    id="id"
+    placeholder="ID"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="vendor">Vendor:</label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="product.vendor.name"
+    type="select"
+    name="Vendor"
+    id="vendor"
+    placeholder="Vendor"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="partNumber">Part Number:</label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="product.partNumber"
+    type="text"
+    name="PartNumber"
+    id="partNumber"
+    placeholder="Part Number"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="name">Name:</label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="product.name"
+    type="text"
+    name="Name"
+    id="name"
+    placeholder="Last Name"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="price">Price:</label>
+  <input
+    class="form-control col-sm-6"
+    [ngModel]="product.price | currency"
+    (ngModelChange)="product.price = $event"
+    type="text"
+    name="Price"
+    id="price"
+    placeholder="Price"
+  />
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="unit">unit:</label>
+  <input
+    class="form-control col-sm-6"
+    [(ngModel)]="product.unit"
+    type="text"
+    name="Unit"
+    id="unit"
+    placeholder="Unit"
+  />
+</div>
+
+<button class="btn btn-primary">Edit</button>
+<button type="button" (click)="deleteProduct()" class="btn btn-danger">
+  Delete
+</button>
