@@ -17,6 +17,21 @@ import { VendorCreateComponent } from './features/vendor-create/vendor-create.co
 import { ProductListComponent } from './features/product-list/product-list.component';
 import { ProductCreateComponent } from './features/product-create/product-create.component';
 import { ProductDetailComponent } from './features/product-detail/product-detail.component';
+import { RequestListComponent } from './features/request-list/request-list.component';
+import { UserAuthenticateComponent } from './features/user-authenticate/user-authenticate.component';
+import { UserEditComponent } from './features/user-edit/user-edit.component';
+import { ProductEditComponent } from './features/product-edit/product-edit.component';
+import { RequestLinesComponent } from './features/request-lines/request-lines.component';
+import { LineItemCreateComponent } from './features/line-item-create/line-item-create.component';
+import { RequestDetailComponent } from './features/request-detail/request-detail.component';
+import { RequestCreateComponent } from './features/request-create/request-create.component';
+import { VendorEditComponent } from './features/vendor-edit/vendor-edit.component';
+import { RequestReviewComponent } from './features/request-review/request-review.component';
+import { LineItemEditComponent } from './features/line-item-edit/line-item-edit.component';
+import { RequestEditComponent } from './features/request-edit/request-edit.component';
+import { RequestApproveComponent } from './features/request-approve/request-approve.component';
+//import { SystemService } from './services/system.service';
+//import { SystemComponent } from './services/system/system.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +47,23 @@ import { ProductDetailComponent } from './features/product-detail/product-detail
     ProductListComponent,
     ProductCreateComponent,
     ProductDetailComponent,
-  ],
+    RequestListComponent,
+    UserAuthenticateComponent,
+    UserEditComponent,
+    ProductEditComponent,
+    RequestLinesComponent,
+    RequestCreateComponent,
+    LineItemCreateComponent,
+    RequestCreateComponent,
+    RequestDetailComponent,
+    VendorEditComponent,
+    VendorEditComponent,
+    RequestReviewComponent,
+    LineItemEditComponent,
+    RequestEditComponent,
+    RequestApproveComponent
+
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

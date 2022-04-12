@@ -12,6 +12,7 @@ const userRoute = '/users';
 })
 export class UserService {
   url = environment.apiBaseUrl + userRoute;
+
   constructor(private http: HttpClient) {}
 
   //http://localhost:8080/users/
@@ -28,11 +29,23 @@ export class UserService {
 
   // http://localhost:8080/users
   createUser(user: User): Observable<User[]> {
-    return this.http.post<User[]>(this.url, user)
+    return this.http.post<User[]>(this.url, user);
+  }
+
+  // http://localhost:8080/user/{id}
+  updateUser(user: User): Observable<User[]> {
+    let requestUrl = this.url + '/' + user.id;
+    return this.http.put<User[]>(requestUrl, user);
   }
 
   deleteById(id: number): Observable<User[]> {
-    let requestUrl = this.url + '/' + id
-    return this.http.delete<User[]>(requestUrl)
+    let requestUrl = this.url + '/' + id;
+    return this.http.delete<User[]>(requestUrl);
+  }
+
+  // http://localhost:8080/user/authenticate
+  authticate(user: User): Observable<User[]> {
+    let requestUrl = this.url + '/authenticate';
+    return this.http.post<User[]>(requestUrl, user);
   }
 }

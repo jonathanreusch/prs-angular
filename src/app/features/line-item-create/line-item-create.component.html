@@ -1,0 +1,46 @@
+<app-menu></app-menu>
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="product">Product</label>
+  <select
+    type="text"
+    id="product"
+    name="Product"
+    class="form-control col-sm-2"
+    [(ngModel)]="lineItem.product"
+  >
+    <!--#product="ngModel" placeholder="Product"
+    required enabled>-->
+    <option value="">- Select -</option>
+    <option *ngFor="let product of products" [ngValue]="product">
+      {{ product.name }} | {{ product.vendor.name}}
+    </option>
+  </select>
+</div>
+
+<!--<div
+  class="form-group row"
+  *ngIf="product.invalid && (product.dirty || product.touched)"
+  class="alert"
+>
+  <div class="form-group row text-danger" *ngIf="product.errors?.['required']">
+    <label class="col-form-label col-sm-2"></label>
+    <div>This field is required</div>
+  </div>
+</div> -->
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="quantity">Quantity</label>
+  <input
+    type="number"
+    id="quantity"
+    name="Quantity"
+    class="form-control col-sm-2"
+    [(ngModel)]="lineItem.quantity"
+    placeholder="Quantity"
+    required
+  />
+</div>
+
+<button type="button" class="btn btn-primary" (click)="createLineItem()">
+  Add Line Item
+</button>

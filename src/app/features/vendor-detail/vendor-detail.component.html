@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="name">Name:</label>
   <input
@@ -89,5 +90,9 @@
   />
 </div>
 
-<button class="btn btn-primary">Edit</button>
-<button type="button"(click)="deleteVendor()" class="btn btn-danger">Delete</button>
+<button class="btn btn-primary" routerLink="/vendor/edit/{{ vendor.id }}">
+  Edit
+</button>
+<button type="button" (click)="deleteVendor()" class="btn btn-danger">
+  Delete
+</button>

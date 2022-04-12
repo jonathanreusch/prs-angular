@@ -11,7 +11,7 @@ const userRoute = '/products';
   providedIn: 'root',
 })
 export class ProductService {
-  url = environment.apiBaseUrl + userRoute;
+  private url = environment.apiBaseUrl + userRoute;
   constructor(private http: HttpClient) {}
 
   //http://localhost:8080/product/
@@ -34,5 +34,10 @@ export class ProductService {
   deleteById(id: number): Observable<Product[]> {
     let requestUrl = this.url + '/' + id;
     return this.http.delete<Product[]>(requestUrl);
+  }
+
+  updateProduct(product: Product): Observable<Product[]> {
+    let requestUrl = this.url + '/' + product.id;
+    return this.http.put<Product[]>(requestUrl, product);
   }
 }

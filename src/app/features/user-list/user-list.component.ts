@@ -28,7 +28,6 @@ export class UserListComponent implements OnInit {
   deleteUser(id: number) {
     this.userService.deleteById(id).subscribe(
       (data) => {
-        //this.router.navigateByUrl('/user/list')
         this.ngOnInit();
       },
       (error) => console.log(error)

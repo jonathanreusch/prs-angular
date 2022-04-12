@@ -1,6 +1,7 @@
-<button type="button" class="btn btn-primary" routerLink="/product/create">
+<app-menu></app-menu>
+<!--<button type="button" class="btn btn-primary" routerLink="/product/create">
   Add New Product
-</button>
+</button>-->
 
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="partNumber">Part Number:</label>
@@ -18,7 +19,8 @@
   <label class="col-form-label col-sm-2" for="price">Price:</label>
   <input
     class="form-control col-sm-6"
-    [(ngModel)]="product.price"
+    [ngModel]="product.price | currency"
+    (ngModelChange)="product.price = $event"
     type="text"
     name="Price"
     id="price"
@@ -28,8 +30,15 @@
 
 <div class="form-group row">
   <label class="col-form-label col-sm-2" for="vendor">Vendor:</label>
-  <select [(ngModel)]='product.vendor' class="form-control col-sm-6" id="vendor" name="Vendor">
-    <option *ngFor="let vendor of vendors" [ngValue]='vendor'>{{ vendor.name }}</option>
+  <select
+    [(ngModel)]="product.vendor"
+    class="form-control col-sm-6"
+    id="vendor"
+    name="Vendor"
+  >
+    <option *ngFor="let vendor of vendors" [ngValue]="vendor">
+      {{ vendor.name }}
+    </option>
   </select>
 </div>
 
